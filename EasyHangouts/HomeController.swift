@@ -70,14 +70,44 @@ class HomeController: UITableViewController, DataDelegate {
         
         //Add the new hangout to the "hangouts" collection
         guard let key = ref.child("hangouts").childByAutoId().key else { return }
+        
+        var members = [String: Bool]()
+        members[self.username!] = true
+        for invitee in hangout.invitees {
+            members[invitee] = false
+            
+            ref.child("userhangouts/\(invitee)/").child(key).setValue(false)
+        }
+        
         let hangoutPost = ["locked": false,
-                    "members": [self.username!: true],
-                    "title": hangout.title] as [String : Any]
+                           "members": members,
+                           "title": hangout.title] as [String : Any]
         let childUpdates = ["/hangouts/\(key)": hangoutPost]
         ref.updateChildValues(childUpdates)
         
         //Update the current user's "userhangouts"
         ref.child("userhangouts/\(self.username!)/").child(key).setValue(true)
+    }
+    
+    func updateHangout(hangout: Hangout, id key: String) {
+        dismiss(animated: true, completion: nil)
+        if let indexPath: IndexPath = self.tableView?.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        for invitee in hangout.invitees {
+            ref.child("userhangouts/\(invitee)/").child(key).setValue(false)
+            ref.child("hangouts/\(key)/members/").child(invitee).setValue(false)
+        }
+        
+        ref.child("hangouts/\(key)/title").setValue(hangout.title)
+    }
+    
+    func cancelHangout() {
+        dismiss(animated: true, completion: nil)
+        if let indexPath: IndexPath = self.tableView?.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     @IBAction func addFriend() {
@@ -104,10 +134,8 @@ class HomeController: UITableViewController, DataDelegate {
     }
     
     override func viewDidLoad() {
-        //super.viewDidLoad();
+        super.viewDidLoad();
         putUser(id: username!)
-        
-        //ref = Database.database().reference()
         
         //If the current user's list of hangouts changes:
         _ = ref?.child("userhangouts").child(username!).observe(DataEventType.value, with: {(snapshot) in
@@ -125,10 +153,23 @@ class HomeController: UITableViewController, DataDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as? UINavigationController
+        
+        let addHangoutVC = navVC?.topViewController as? AddHangoutController
+        
+        addHangoutVC?.delegate = self
+        addHangoutVC?.username = self.username
+        addHangoutVC?.ref = self.ref
+        
         if segue.identifier == "modalsegue" {
-            let navVC = segue.destination as? UINavigationController
-            let addHangoutVC = navVC?.topViewController as? AddHangoutController
-            addHangoutVC?.delegate = self
+            addHangoutVC?.hangout = Hangout(title: "")
+            addHangoutVC?.edit = false
+        } else if segue.identifier == "cellsegue" {
+            let row = self.tableView.indexPathForSelectedRow?.row
+            let entry = Array(self.hangouts)[row!]
+            addHangoutVC?.hangoutID = entry.key
+            addHangoutVC?.hangout = entry.value
+            addHangoutVC?.edit = true
         }
     }
     
@@ -141,10 +182,6 @@ class HomeController: UITableViewController, DataDelegate {
         return self.hangouts.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 50
-//    }
-    
     @IBAction func joinLeave(_ sender: AnyObject?) {
         
         if let button = sender as? CustomButton {
@@ -154,17 +191,11 @@ class HomeController: UITableViewController, DataDelegate {
             self.ref.child("userhangouts/\(username!)/\(hangoutID)").setValue(newMember)
             
             self.ref.child("/hangouts/\(hangoutID)/members/").child(username!).setValue(newMember)
-            
-//            if (newMember) {
-//                self.ref.child("/hangouts/\(hangoutID)/members/").child(username!).setValue(true)
-//            } else {
-//                self.ref.child("hangouts/\(hangoutID)/members/\(username!)").removeValue()
-//            }
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO: Deque a cell from the table view and configure its UI. Set the label and star image by using cell.viewWithTag(..)
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "proto")
         
         let thisEntry = Array(self.hangouts)[indexPath.row]
@@ -180,7 +211,6 @@ class HomeController: UITableViewController, DataDelegate {
         }
         
         if let joinButton = cell?.viewWithTag(-1) as? CustomButton {
-            //joinButton.tag = indexPath.row
             joinButton.hangoutID = thisHangoutID
             
             if thisHangout.member {

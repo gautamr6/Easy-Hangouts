@@ -48,10 +48,10 @@ class Hangout {
             
         }
         
-        self.locked = dict["locked"] as! Bool
+        self.locked = dict["locked"] as? Bool ?? false
     }
     
-    func usersString() -> String  {
+    func fullUsersString() -> String {
         if users.count == 0 {
             return "Nobody here!"
         }
@@ -61,7 +61,44 @@ class Hangout {
             ret.append(delegate?.getUser(id: username)?.name ?? "")
             ret.append(", ")
         }
+        
         let ind = ret.lastIndex(of: ",")
         return String(ret[..<ind!])
+    }
+    
+    func usersString() -> String  {
+        if users.count == 0 {
+            return "Nobody here!"
+        }
+        
+        if users.count <= 2 {
+            var ret: String = ""
+            for username in users {
+                ret.append(delegate?.getUser(id: username)?.name ?? "")
+                ret.append(", ")
+            }
+            
+            let ind = ret.lastIndex(of: ",")
+            return String(ret[..<ind!])
+        }
+        
+        var ret: String = ""
+        
+        //Append user 1
+        ret.append(delegate?.getUser(id: users[0])?.name ?? "")
+        ret.append(", ")
+        
+        //Append user 2
+        ret.append(delegate?.getUser(id: users[1])?.name ?? "")
+        ret.append(", ")
+        
+        //Append number of others
+        if users.count == 3 {
+            ret.append("and 1 other")
+        } else {
+            ret.append("and \(users.count - 2) others")
+        }
+        
+        return ret
     }
 }
