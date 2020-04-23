@@ -1,0 +1,6 @@
+framework module Pods_EasyHangouts_EasyHangoutsUITests {
+  umbrella header "Pods-EasyHangouts-EasyHangoutsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

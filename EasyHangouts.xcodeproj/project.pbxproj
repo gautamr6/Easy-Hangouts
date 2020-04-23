@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF15864E74F5CEA768586956 /* Pods_EasyHangouts_EasyHangoutsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DCB6097F46874AA4BDC5E4 /* Pods_EasyHangouts_EasyHangoutsUITests.framework */; };
+		B62741AF9E0AF0D519EEF81A /* Pods_EasyHangoutsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16B2806C3F0C29C3A6DDFBC /* Pods_EasyHangoutsTests.framework */; };
 		BE03A47324453A3100590983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03A47224453A3100590983 /* AppDelegate.swift */; };
 		BE03A47524453A3100590983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03A47424453A3100590983 /* SceneDelegate.swift */; };
 		BE03A47724453A3100590983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03A47624453A3100590983 /* ViewController.swift */; };
@@ -15,6 +17,16 @@
 		BE03A47F24453A3700590983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE03A47D24453A3700590983 /* LaunchScreen.storyboard */; };
 		BE03A48A24453A3700590983 /* EasyHangoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03A48924453A3700590983 /* EasyHangoutsTests.swift */; };
 		BE03A49524453A3700590983 /* EasyHangoutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03A49424453A3700590983 /* EasyHangoutsUITests.swift */; };
+		BE45769D244E77DD00A68F23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE45769C244E77DD00A68F23 /* GoogleService-Info.plist */; };
+		BE45769E244E77DD00A68F23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE45769C244E77DD00A68F23 /* GoogleService-Info.plist */; };
+		BE45769F244E77DD00A68F23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE45769C244E77DD00A68F23 /* GoogleService-Info.plist */; };
+		BEA279A824510DF6001F076A /* AddHangoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA279A724510DF6001F076A /* AddHangoutController.swift */; };
+		BEA43BBE244F9368003C5F82 /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA43BBD244F9368003C5F82 /* DataDelegate.swift */; };
+		BEA43BC0244FD43A003C5F82 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA43BBF244FD43A003C5F82 /* CustomButton.swift */; };
+		BEF82B20244D338F00EA53A4 /* Hangout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF82B1F244D338F00EA53A4 /* Hangout.swift */; };
+		BEF82B22244D352900EA53A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF82B21244D352900EA53A4 /* User.swift */; };
+		BEF82B26244D3EEF00EA53A4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF82B25244D3EEF00EA53A4 /* HomeController.swift */; };
+		D69650D492DD4122E71ED8B4 /* Pods_EasyHangouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCF2CB582A349036B985834 /* Pods_EasyHangouts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DCB6097F46874AA4BDC5E4 /* Pods_EasyHangouts_EasyHangoutsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHangouts_EasyHangoutsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1262A0A44305F99147430C37 /* Pods-EasyHangouts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangouts.debug.xcconfig"; path = "Target Support Files/Pods-EasyHangouts/Pods-EasyHangouts.debug.xcconfig"; sourceTree = "<group>"; };
+		15BDDF0F73E61E478E3F2791 /* Pods-EasyHangouts-EasyHangoutsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangouts-EasyHangoutsUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyHangouts-EasyHangoutsUITests/Pods-EasyHangouts-EasyHangoutsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9CCF2CB582A349036B985834 /* Pods_EasyHangouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHangouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9447DC859827BFA47CBCFC /* Pods-EasyHangouts-EasyHangoutsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangouts-EasyHangoutsUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyHangouts-EasyHangoutsUITests/Pods-EasyHangouts-EasyHangoutsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B16B2806C3F0C29C3A6DDFBC /* Pods_EasyHangoutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHangoutsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8BCE7CB47EBFD916C3D0971 /* Pods-EasyHangoutsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangoutsTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyHangoutsTests/Pods-EasyHangoutsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE03A46F24453A3100590983 /* EasyHangouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHangouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE03A47224453A3100590983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE03A47424453A3100590983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,15 @@
 		BE03A49024453A3700590983 /* EasyHangoutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHangoutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE03A49424453A3700590983 /* EasyHangoutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHangoutsUITests.swift; sourceTree = "<group>"; };
 		BE03A49624453A3800590983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE45769C244E77DD00A68F23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEA279A724510DF6001F076A /* AddHangoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHangoutController.swift; sourceTree = "<group>"; };
+		BEA43BBD244F9368003C5F82 /* DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegate.swift; sourceTree = "<group>"; };
+		BEA43BBF244FD43A003C5F82 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BEF82B1F244D338F00EA53A4 /* Hangout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hangout.swift; sourceTree = "<group>"; };
+		BEF82B21244D352900EA53A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BEF82B25244D3EEF00EA53A4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		E8C28C362CAFC65DD948CA94 /* Pods-EasyHangouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangouts.release.xcconfig"; path = "Target Support Files/Pods-EasyHangouts/Pods-EasyHangouts.release.xcconfig"; sourceTree = "<group>"; };
+		EE87EBEE9D66189AA4E2ED84 /* Pods-EasyHangoutsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHangoutsTests.release.xcconfig"; path = "Target Support Files/Pods-EasyHangoutsTests/Pods-EasyHangoutsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69650D492DD4122E71ED8B4 /* Pods_EasyHangouts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62741AF9E0AF0D519EEF81A /* Pods_EasyHangoutsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF15864E74F5CEA768586956 /* Pods_EasyHangouts_EasyHangoutsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		980F88E9C1CAF55AA525A28B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1262A0A44305F99147430C37 /* Pods-EasyHangouts.debug.xcconfig */,
+				E8C28C362CAFC65DD948CA94 /* Pods-EasyHangouts.release.xcconfig */,
+				AA9447DC859827BFA47CBCFC /* Pods-EasyHangouts-EasyHangoutsUITests.debug.xcconfig */,
+				15BDDF0F73E61E478E3F2791 /* Pods-EasyHangouts-EasyHangoutsUITests.release.xcconfig */,
+				B8BCE7CB47EBFD916C3D0971 /* Pods-EasyHangoutsTests.debug.xcconfig */,
+				EE87EBEE9D66189AA4E2ED84 /* Pods-EasyHangoutsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE03A46624453A3100590983 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +127,8 @@
 				BE03A48824453A3700590983 /* EasyHangoutsTests */,
 				BE03A49324453A3700590983 /* EasyHangoutsUITests */,
 				BE03A47024453A3100590983 /* Products */,
+				980F88E9C1CAF55AA525A28B /* Pods */,
+				F0CC4C6F0C86708B0A1C4546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +145,16 @@
 		BE03A47124453A3100590983 /* EasyHangouts */ = {
 			isa = PBXGroup;
 			children = (
+				BE45769C244E77DD00A68F23 /* GoogleService-Info.plist */,
 				BE03A47224453A3100590983 /* AppDelegate.swift */,
 				BE03A47424453A3100590983 /* SceneDelegate.swift */,
 				BE03A47624453A3100590983 /* ViewController.swift */,
+				BEF82B25244D3EEF00EA53A4 /* HomeController.swift */,
+				BEA43BBF244FD43A003C5F82 /* CustomButton.swift */,
+				BEA279A724510DF6001F076A /* AddHangoutController.swift */,
+				BEA43BBD244F9368003C5F82 /* DataDelegate.swift */,
+				BEF82B1F244D338F00EA53A4 /* Hangout.swift */,
+				BEF82B21244D352900EA53A4 /* User.swift */,
 				BE03A47824453A3100590983 /* Main.storyboard */,
 				BE03A47B24453A3700590983 /* Assets.xcassets */,
 				BE03A47D24453A3700590983 /* LaunchScreen.storyboard */,
@@ -128,6 +181,16 @@
 			path = EasyHangoutsUITests;
 			sourceTree = "<group>";
 		};
+		F0CC4C6F0C86708B0A1C4546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CCF2CB582A349036B985834 /* Pods_EasyHangouts.framework */,
+				00DCB6097F46874AA4BDC5E4 /* Pods_EasyHangouts_EasyHangoutsUITests.framework */,
+				B16B2806C3F0C29C3A6DDFBC /* Pods_EasyHangoutsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE03A49924453A3800590983 /* Build configuration list for PBXNativeTarget "EasyHangouts" */;
 			buildPhases = (
+				F3B5E0CF9178C0094766720D /* [CP] Check Pods Manifest.lock */,
 				BE03A46B24453A3100590983 /* Sources */,
 				BE03A46C24453A3100590983 /* Frameworks */,
 				BE03A46D24453A3100590983 /* Resources */,
+				AB34FB872E97C92F2C606864 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE03A49C24453A3800590983 /* Build configuration list for PBXNativeTarget "EasyHangoutsTests" */;
 			buildPhases = (
+				B38EC0803DC1678EA5CC2A9F /* [CP] Check Pods Manifest.lock */,
 				BE03A48124453A3700590983 /* Sources */,
 				BE03A48224453A3700590983 /* Frameworks */,
 				BE03A48324453A3700590983 /* Resources */,
@@ -170,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE03A49F24453A3800590983 /* Build configuration list for PBXNativeTarget "EasyHangoutsUITests" */;
 			buildPhases = (
+				66034C4C74A99F3FCAE5C9FC /* [CP] Check Pods Manifest.lock */,
 				BE03A48C24453A3700590983 /* Sources */,
 				BE03A48D24453A3700590983 /* Frameworks */,
 				BE03A48E24453A3700590983 /* Resources */,
+				22DAC8311562D6EC14E4E23F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE03A47F24453A3700590983 /* LaunchScreen.storyboard in Resources */,
+				BE45769D244E77DD00A68F23 /* GoogleService-Info.plist in Resources */,
 				BE03A47C24453A3700590983 /* Assets.xcassets in Resources */,
 				BE03A47A24453A3100590983 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE45769E244E77DD00A68F23 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +319,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE45769F244E77DD00A68F23 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22DAC8311562D6EC14E4E23F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts-EasyHangoutsUITests/Pods-EasyHangouts-EasyHangoutsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts-EasyHangoutsUITests/Pods-EasyHangouts-EasyHangoutsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts-EasyHangoutsUITests/Pods-EasyHangouts-EasyHangoutsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66034C4C74A99F3FCAE5C9FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyHangouts-EasyHangoutsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB34FB872E97C92F2C606864 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts/Pods-EasyHangouts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts/Pods-EasyHangouts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyHangouts/Pods-EasyHangouts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B38EC0803DC1678EA5CC2A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyHangoutsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B5E0CF9178C0094766720D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyHangouts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE03A46B24453A3100590983 /* Sources */ = {
@@ -261,6 +435,12 @@
 			files = (
 				BE03A47724453A3100590983 /* ViewController.swift in Sources */,
 				BE03A47324453A3100590983 /* AppDelegate.swift in Sources */,
+				BEF82B26244D3EEF00EA53A4 /* HomeController.swift in Sources */,
+				BEF82B20244D338F00EA53A4 /* Hangout.swift in Sources */,
+				BEA43BC0244FD43A003C5F82 /* CustomButton.swift in Sources */,
+				BEA279A824510DF6001F076A /* AddHangoutController.swift in Sources */,
+				BEA43BBE244F9368003C5F82 /* DataDelegate.swift in Sources */,
+				BEF82B22244D352900EA53A4 /* User.swift in Sources */,
 				BE03A47524453A3100590983 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +612,7 @@
 		};
 		BE03A49A24453A3800590983 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1262A0A44305F99147430C37 /* Pods-EasyHangouts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +630,7 @@
 		};
 		BE03A49B24453A3800590983 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C28C362CAFC65DD948CA94 /* Pods-EasyHangouts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +648,7 @@
 		};
 		BE03A49D24453A3800590983 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BCE7CB47EBFD916C3D0971 /* Pods-EasyHangoutsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +670,7 @@
 		};
 		BE03A49E24453A3800590983 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE87EBEE9D66189AA4E2ED84 /* Pods-EasyHangoutsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +692,7 @@
 		};
 		BE03A4A024453A3800590983 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9447DC859827BFA47CBCFC /* Pods-EasyHangouts-EasyHangoutsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +712,7 @@
 		};
 		BE03A4A124453A3800590983 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15BDDF0F73E61E478E3F2791 /* Pods-EasyHangouts-EasyHangoutsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
