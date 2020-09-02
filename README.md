@@ -1,6 +1,4 @@
 # Easy Hangouts
-PennKey: gautam1
-
 EasyHangouts is an app where you can easily find friends who are down to hang out or study. Users can:
 * Add/follow their friends
 * Create and edit hangouts
